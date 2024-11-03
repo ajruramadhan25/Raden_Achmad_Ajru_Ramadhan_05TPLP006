@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const jabatanData = JSON.parse(localStorage.getItem('jabatanData')) || [];
+
+    // Jika tidak ada data, tambahkan data dummy
+    if (jabatanData.length === 0) {
+        const dummyData = [
+            { kode: 'J001', nama: 'Manager' },
+            { kode: 'J002', nama: 'Asisten Manager' },
+            { kode: 'J003', nama: 'Staff' },
+            { kode: 'J004', nama: 'Intern' }
+        ];
+        localStorage.setItem('jabatanData', JSON.stringify(dummyData));
+        jabatanData.push(...dummyData); // Menambahkan data dummy ke jabatanData
+    }
+
     const jabatanTable = document.getElementById('datatablesSimple').getElementsByTagName('tbody')[0];
 
     jabatanData.forEach((data, index) => {
@@ -45,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fungsi untuk mengaktifkan mode edit di baris tabel
 function enableEdit(row, index) {
-    // Ambil data dari localStorage
     const jabatanData = JSON.parse(localStorage.getItem('jabatanData')) || [];
 
     // Ambil sel-sel dari baris
@@ -84,17 +96,14 @@ function saveEdit(row, index) {
 
     // Validasi input tidak boleh kosong
     if (kodeInput.value && namaInput.value) {
-        // Update data di localStorage
         const jabatanData = JSON.parse(localStorage.getItem('jabatanData')) || [];
         jabatanData[index].kode = kodeInput.value;
         jabatanData[index].nama = namaInput.value;
         localStorage.setItem('jabatanData', JSON.stringify(jabatanData));
 
-        // Kembalikan sel ke teks biasa setelah disimpan
         row.cells[1].textContent = kodeInput.value;
         row.cells[2].textContent = namaInput.value;
 
-        // Kembalikan tombol Aksi
         resetActionButtons(row, index);
     } else {
         alert("Kode Jabatan dan Nama Jabatan tidak boleh kosong.");
@@ -103,12 +112,10 @@ function saveEdit(row, index) {
 
 // Fungsi untuk membatalkan perubahan
 function cancelEdit(row, index) {
-    // Kembalikan data di baris ke nilai awal tanpa menyimpan
     const jabatanData = JSON.parse(localStorage.getItem('jabatanData')) || [];
     row.cells[1].textContent = jabatanData[index].kode;
     row.cells[2].textContent = jabatanData[index].nama;
 
-    // Kembalikan tombol Aksi
     resetActionButtons(row, index);
 }
 
