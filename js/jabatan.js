@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Jika tidak ada data, tambahkan data dummy
     if (jabatanData.length === 0) {
         const dummyData = [
-            { kode: 'J001', nama: 'Manager' },
-            { kode: 'J002', nama: 'Asisten Manager' },
-            { kode: 'J003', nama: 'Staff' },
-            { kode: 'J004', nama: 'Intern' }
+            { kode: 'J001', nama: 'Prodi' },
+            { kode: 'J002', nama: 'WakaProdi' },
+            { kode: 'J003', nama: 'Bendahara' },
+            { kode: 'J004', nama: 'Dosen Level 1' }
         ];
         localStorage.setItem('jabatanData', JSON.stringify(dummyData));
         jabatanData.push(...dummyData); // Menambahkan data dummy ke jabatanData
