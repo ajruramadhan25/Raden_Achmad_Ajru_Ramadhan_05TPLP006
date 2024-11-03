@@ -126,10 +126,10 @@
                                 <label for="position" class="form-label">Jabatan</label>
                                 <select class="form-select" id="position" required>
                                     <option value="" disabled selected>Pilih jabatan</option>
-                                    <option value="Kepala Program Studi">Kepala Program Studi</option>
-                                    <option value="Wakil Kepala Program-Studi">Wakil Kepala Program Studi</option>
-                                    <option value="Bendahara Program Studi">Bendahara Program Studi</option>
-                                    <option value="Dosen-Level 1">Dosen Level 1</option>
+                                    <option value="Prodi">Kepala Program Studi</option>
+                                    <option value="WakaProdi">Wakil Kepala Program Studi</option>
+                                    <option value="Bendahara">Bendahara Program Studi</option>
+                                    <option value="Dosen Level 1">Dosen Level 1</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -163,32 +163,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="../js/scripts.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.querySelector('#addEmployeeForm');
-            form.onsubmit = function (e) {
-                e.preventDefault(); // Mencegah pengiriman form secara default
-                
-                // Mengambil data dari form
-                const employee = {
-                    nama: document.getElementById('fullName').value,
-                    gender: document.getElementById('gender').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    address: document.getElementById('address').value,
-                    position: document.getElementById('position').value,
-                    division: document.getElementById('division').value,
-                };
-
-                // Menyimpan data di localStorage
-                let employees = JSON.parse(localStorage.getItem('employees')) || [];
-                employees.push(employee);
-                localStorage.setItem('employees', JSON.stringify(employees));
-
-                // Redirect ke halaman karyawan.html
-                window.location.href = '../karyawan.html';
-            };
-        });
-    </script>
+   <script src="../js/add/add_karyawan.js"></script>
 </body>
 </html>

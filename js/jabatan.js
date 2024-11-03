@@ -76,6 +76,7 @@ function enableEdit(row, index) {
     saveButton.innerHTML = '<i class="fas fa-save"></i>';
     saveButton.onclick = function() {
         saveEdit(row, index);
+        
     };
     aksiCell.appendChild(saveButton);
 
@@ -85,6 +86,9 @@ function enableEdit(row, index) {
     cancelButton.innerHTML = '<i class="fas fa-times"></i>';
     cancelButton.onclick = function() {
         cancelEdit(row, index);
+        location.reload();
+
+
     };
     aksiCell.appendChild(cancelButton);
 }

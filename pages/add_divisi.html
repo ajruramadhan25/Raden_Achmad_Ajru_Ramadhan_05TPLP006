@@ -115,30 +115,30 @@
             </div>
             <div id="layoutSidenav_content">
                 
-                    <main>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-plus me-1"></i>
-                                Tambah Jabatan
-                            </div>
-                            <div class="card-body">
-                                <form action="../jabatan.html" method="POST">
-                                    <div class="mb-3">
-                                        <label for="kode_jabatan" class="form-label">Kode Jabatan</label>
-                                        <input type="text" class="form-control" id="kode_jabatan" name="kode_jabatan" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="nama_jabatan" class="form-label">Nama Jabatan</label>
-                                        <input type="text" class="form-control" id="nama_jabatan" name="nama_jabatan" required />
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <button type="submit" class="btn btn-success">Simpan</button>
-                                        <a href="../jabatan.html" class="btn btn-secondary">Batal</a>
-                                    </div>
-                                </form>
-                            </div>
+                <main>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-plus me-1"></i>
+                            Tambah Divisi
                         </div>
-                    </main>
+                        <div class="card-body">
+                            <form id="formDivisi">
+                                <div class="mb-3">
+                                    <label for="kode_divisi" class="form-label">Kode Divisi</label>
+                                    <input type="text" class="form-control" id="kode_divisi" name="kode_divisi" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="nama_divisi" class="form-label">Nama Divisi</label>
+                                    <input type="text" class="form-control" id="nama_divisi" name="nama_divisi" required />
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-success" onclick="simpanDivisi()">Simpan</button>
+                                    <a href="../divisi.html" class="btn btn-secondary">Batal</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
                 
                 
                     
@@ -163,5 +163,6 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
+        <script src="../js/add/add_divisi.js"></script>
     </body>
 </html>
