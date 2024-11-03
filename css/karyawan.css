@@ -10,8 +10,8 @@ body {
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
-    background: linear-gradient(to bottom, #b4b9c5 30%, var(--bs-body-bg) 80%);
-    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom, #1f4399 30%, var(--bs-body-bg) 80%);
+    height: 100vh;
 }
 
 /* Main layout adjustments */

@@ -97,9 +97,9 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: #000000;
   text-align: var(--bs-body-text-align);
-  background: linear-gradient(to bottom, #b4b9c5 30%, var(--bs-body-bg) 65%);
+  background: linear-gradient(to bottom, #3044a1 30%, var(--bs-body-bg) 65%);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -4194,6 +4194,7 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
+  margin-top: 2%;
 }
 .card > hr {
   margin-right: 0;
@@ -8179,7 +8180,7 @@ textarea.form-control-lg {
 
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: rgb(15 30 47 / 71%) !important;
+  background-color: rgb(3 69 231 / 82%) !important;
 }
 
 .bg-black {
@@ -11021,7 +11022,7 @@ body {
 
 .sb-sidenav-dark {
   background-color: #fff;
-  color: rgb(0 0 0);
+  color: rgb(255 255 255);
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
   color: rgb(0 0 0);
@@ -11045,7 +11046,7 @@ body {
   color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
-  background-color: #a6aaae;
+  background-color: #186ec5;
 }
 
 .sb-sidenav-light {
@@ -11255,7 +11256,7 @@ body {
 
 .sb-sidenav .nav-link:hover {
   color: white !important; /* Warna teks saat hover */
-  background-color: rgba(15, 30, 47, 0.71) !important; /* Menggunakan warna yang diminta saat hover */
+  background-color: rgb(11 69 218) !important;
 }
 
 .sb-sidenav .nav-link.active,
@@ -11267,21 +11268,23 @@ body {
 /* Warna teks dan background saat menu aktif */
 .sb-sidenav .nav-link.active {
   color: white !important; /* Warna teks aktif */
-  background-color: rgba(15, 30, 47, 0.71) !important; /* Menggunakan warna yang diminta */
+  background-color: rgb(11 69 218) !important; /* Menggunakan warna yang diminta */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat untuk elemen aktif */
 }
 
 
 .profile-container {
-  display: flex; /* Membuat elemen di dalamnya menjadi flex */
-  align-items: center; /* Vertikal center */
-  justify-content: center; /* Horizontal center */
-  padding: 10px; /* Ruang di dalam kontainer */
-  border: 1px solid rgba(169, 169, 169, 0.5); /* Garis batas lembut (abu-abu) */
-  border-radius: 0; /* Tidak ada pembulatan sudut, membuatnya lancip */
-  background-color: rgba(240, 240, 240, 0.9); /* Warna latar belakang lembut (abu-abu terang) */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid rgb(255 255 255 / 50%);
+    border-radius: 0;
+    background-color: rgb(48 103 235);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .profile-img {
   width: 50px; /* Lebar gambar */
